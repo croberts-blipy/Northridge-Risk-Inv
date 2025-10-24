@@ -1,0 +1,11 @@
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="40" height="40" rx="8" fill="url(#paint0_linear)" />
+  <path d="M12 27L12 13H15.5L21 21.7L26.5 13H30L30 27H26.5L26.5 18.3L21 26.5L15.5 18.3L15.5 27H12Z" fill="white" />
+  <text x="50" y="26" fill="#111827" font-family="'Inter', sans-serif" font-size="18" font-weight="700">Northridge</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D45F4" />
+      <stop offset="1" stop-color="#5F76FF" />
+    </linearGradient>
+  </defs>
+</svg>
