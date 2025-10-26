@@ -1,19 +1,85 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind v4 entry */
+@import "tailwindcss";
 
-:root {
-  color-scheme: dark;
+/* --- Base dark theme --- */
+:root { color-scheme: dark; }
+
+html, body {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(47,103,255,0.08), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(47,103,255,0.06), transparent 60%),
+    #0D0F12;
+  color: #E8EAED;
+  min-height: 100%;
 }
 
-* {
-  @apply border-border;
+/* ---------- Prototype-style helpers (no @apply to avoid v4 errors) ---------- */
+.nri-panel {
+  background-color: #1A1D21;
+  border: 1px solid #2A2E34;
+  border-radius: 0.75rem; /* rounded-xl */
 }
 
-body {
-  @apply bg-background text-background-foreground;
+.nri-panel-soft {
+  background-color: #181b1f;
+  border: 1px solid #272c31;
+  border-radius: 0.75rem;
 }
 
-a {
-  @apply text-accent transition-colors hover:text-accent/80;
+.nri-title {
+  font-size: 0.875rem;        /* text-sm */
+  font-weight: 600;           /* font-semibold */
+  color: #E8EAED;
+}
+
+.nri-subtle {
+  font-size: 0.75rem;         /* text-xs */
+  color: #9CA3AF;             /* text-gray-400-ish */
+}
+
+/* Buttons */
+.nri-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;     /* rounded-md */
+  padding: 0.5rem 1rem;        /* px-4 py-2 */
+  font-size: 0.875rem;         /* text-sm */
+  font-weight: 500;            /* font-medium */
+  transition: background-color .2s ease, color .2s ease, opacity .2s ease;
+}
+
+.nri-btn-primary {
+  composes: nri-btn;
+  background-color: #2F67FF;
+  color: #fff;
+}
+.nri-btn-primary:hover { background-color: #2554CC; }
+
+.nri-btn-ghost {
+  composes: nri-btn;
+  background-color: rgba(255,255,255,0.05);
+  color: #e5e7eb;
+}
+.nri-btn-ghost:hover { background-color: rgba(255,255,255,0.10); }
+
+/* Badges */
+.badge {
+  font-size: 0.75rem;          /* text-xs */
+  padding: 0.125rem 0.5rem;    /* py-0.5 px-2 */
+  border-radius: 9999px;       /* rounded-full */
+}
+
+.badge-high  { background-color: #3a2323; color: #ff9b9b; }
+.badge-low   { background-color: #233a2a; color: #9be5b5; }
+
+/* List items */
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #181b1f;
+  border: 1px solid #272c31;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;       /* py-3 px-4 */
 }
